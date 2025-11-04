@@ -1,0 +1,24 @@
+<%- include('sub/head.ejs') %>
+<body>
+    <div class="container-fluid">
+		<%- include('sub/listHeader.ejs') %>
+		<div class="text-center page-header container-fluid"
+			style="font-family:Times; background-color: #eeeeff;">
+			<h1><%= type.typeName %></h1>
+		</div>
+	</div>
+	<ul>
+		<% for (i = 0; i < docs.length; i++) { %>
+		<div class="docs">
+			</br>
+			<li>
+				<a href="/obj/<%=docs[i].id %>">
+					<%= docs[i].objName %>
+				</a>
+			</li>
+		</div>
+		<% } %>
+	</ul>
+</body>
+</html>
+	 
